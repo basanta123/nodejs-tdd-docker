@@ -1,0 +1,21 @@
+version: "2"
+services:
+  web:
+    build: .
+    ports:
+      - 3000:3000
+    environment:
+      - MONGO_CONNECTION_STRING=mongodb://mongo:27017/tddDB
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo
+    ports:
+      - 27050:27017
+    volumes:
+      - data:/data/db
+
+    restart: always
+volumes:
+  data:
+  #external: true

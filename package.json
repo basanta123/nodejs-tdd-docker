@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-testing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha --timeout 10000 --exit",
+    "coverage": "nyc --reporter=html --reporter=text mocha --exit --timeout 15000",
+    "start": "node bin/www.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mocha": "^7.0.0",
+    "mongoose": "^5.8.9",
+    "nyc": "^15.0.0",
+    "supertest": "^4.0.2"
+  }
+}
