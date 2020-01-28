@@ -16,4 +16,4 @@ COPY . .
 
 EXPOSE 5000
 
-CMD [ "node", "bin/www.js" ]
+CMD [ "npm", "test" ]
