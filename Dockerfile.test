@@ -15,8 +15,9 @@ RUN npm install
 COPY . .
 
 
-ENV MONGO_CONNECTION_STRING=mongodb://localhost/tddDB
+ENV MONGO_CONNECTION_STRING=mongodb://mongo/tddDB
 
 EXPOSE 5000
 
 CMD [ "npm", "test" ]
+FROM mongo
