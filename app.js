@@ -13,7 +13,7 @@ mongoose
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,
-    useUnifiedTopology: true
+    useUnifiedTopology: false
   })
   .then(() =>
     console.log(`Connected to MongoDB at mongodb://localhost/tddDB...`)
