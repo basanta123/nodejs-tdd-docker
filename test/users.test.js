@@ -3,6 +3,21 @@ const request = require("supertest");
 const expect = require("chai").expect;
 const app = require("../app");
 
+var Mongoose = require("mongoose").Mongoose;
+var mongoose = new Mongoose();
+
+var Mockgoose = require("mockgoose").Mockgoose;
+var mockgoose = new Mockgoose(mongoose);
+require("dotenv").config();
+before(function(done) {
+  mongoose.connect(process.env.MONGO_CONNECTION_STRING, {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+    useUnifiedTopology: false
+  });
+});
+
 describe("api/users", () => {
   beforeEach(async () => {
     await User.deleteMany({});
