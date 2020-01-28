@@ -15,4 +15,4 @@ RUN npm install
 COPY . .
 ENV MONGO_CONNECTION_STRING=mongodb://mongo/tddDB
 
-CMD [ mocha --timeout 50000 --exit ]
+CMD [npm test]
