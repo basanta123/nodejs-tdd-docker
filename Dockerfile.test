@@ -13,7 +13,7 @@ RUN npm install
 
 # Bundle app source
 COPY . .
-ENV MONGO_CONNECTION_STRING=mongodb://localhost/tddDB
+ENV MONGO_CONNECTION_STRING=mongodb://127.0.0.1/tddDB
 EXPOSE 5000
 
 CMD [ "npm", "test" ]
