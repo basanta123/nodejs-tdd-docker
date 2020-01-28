@@ -14,6 +14,5 @@ RUN npm install
 # Bundle app source
 COPY . .
 ENV MONGO_CONNECTION_STRING=mongodb://mongo/tddDB
-EXPOSE 5000
 
 CMD [ mocha --timeout 50000 --exit ]
