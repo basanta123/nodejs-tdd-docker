@@ -10,12 +10,15 @@ var Mockgoose = require("mockgoose").Mockgoose;
 var mockgoose = new Mockgoose(mongoose);
 require("dotenv").config();
 before(function(done) {
-  mongoose.connect(process.env.MONGO_CONNECTION_STRING, {
-    useNewUrlParser: true,
-    useCreateIndex: true,
-    useFindAndModify: false,
-    useUnifiedTopology: false
-  });
+  mongoose.connect(
+    "mongodb+srv://nodeapi:nodeapi@nodeapi-lng7j.mongodb.net/tddDb?retryWrites=true&w=majority",
+    {
+      useNewUrlParser: true,
+      useCreateIndex: true,
+      useFindAndModify: false,
+      useUnifiedTopology: false
+    }
+  );
 });
 
 describe("api/users", () => {
