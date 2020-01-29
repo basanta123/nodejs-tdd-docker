@@ -13,6 +13,6 @@ RUN npm install
 
 # Bundle app source
 COPY . .
-
+ENV MONGO_CONNECTION_STRING=mongodb+srv://nodeapi:nodeapi@nodeapi-lng7j.mongodb.net/tddDb?retryWrites=true&w=majority
 EXPOSE 5000
 RUN npm test
